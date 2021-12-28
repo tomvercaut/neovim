@@ -7,6 +7,12 @@ vim.o.modifiable = true
 vim.g.fileformat = unix
 vim.g.fileformats = unix,dos
 
+-- indents and tabs
+vim.cmd [[filetype plugin indent on]]
+vim.o.expandtab = true
+vim.g.shiftwidth = indent
+vim.g.tabstop = indent
+
 -- auto reload a file if it has been changed externally
 vim.o.autoread = true
 vim.api.nvim_exec(

@@ -59,6 +59,18 @@ require('packer').startup(function()
       require('nvim-tree').setup()
     end,
   }
+
+  -- nvim-telescope
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { 
+      {
+	'nvim-lua/plenary.nvim',
+	'kyazdani42/nvim-web-devicons',
+      } 
+    },
+    config = require("user.config.telescope"),
+  }
 end)
 
 -- require('packer').sync()
