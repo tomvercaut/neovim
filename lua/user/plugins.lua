@@ -69,7 +69,6 @@ require('packer').startup(function()
         'kyazdani42/nvim-web-devicons',
       } 
     },
-  --   config = require("user.config.telescope"),
   }
 end)
 

@@ -52,6 +52,14 @@ keymap("n", "<Leader>tt", ":vertical :term<CR>", opts)
 keymap("n", "<Leader>t", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<Leader>r", ":NvimTreeRefresh<CR>", opts)
 
+-- telescope 
+print("telescope find_files")
+keymap("n", "<Leader>ff", "<cmd>lua require'telescope.builtin'.find_files()<CR>", opts)
+keymap("n", "<Leader>fg", "<cmd>lua require'telescope.builtin'.live_grep()<CR>", opts)
+keymap("n", "<Leader>fb", "<cmd>lua require'telescope.builtin'.buffers()<CR>", opts)
+keymap("n", "<Leader>fh", "<cmd>lua require'telescope.builtin'.help_tags()<CR>", opts)
+
+
 -- Insert mode --
 -- Move text up and down by one line
 keymap("i", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
@@ -62,7 +70,6 @@ keymap("i", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 -- Move text up and down by one line
 keymap("v", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("v", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
-
 
 
 

@@ -6,6 +6,7 @@ vim.g.mapleader = " "
 
 require "user.config.options"
 require "user.config.keymappings"
-require "user.config.autocommands"
 require "user.plugins"
+require "user.config.telescope"
+require "user.config.autocommands"
 
