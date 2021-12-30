@@ -70,6 +70,23 @@ require('packer').startup(function()
       } 
     },
   }
+
+  -- lspconfig
+  use {
+    'neovim/nvim-lspconfig'
+  }
+
+  -- completion plugin
+  use 'hrsh7th/nvim-cmp'
+  -- buffer completions
+  use 'hrsh7th/cmp-buffer'
+  -- path completions
+  use 'hrsh7th/cmp-path'
+  -- cmdline completions
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-emoji'
+  use 'hrsh7th/cmp-nvim-lua'
 end)
 
 -- require('packer').sync()

@@ -9,4 +9,5 @@ require "user.config.keymappings"
 require "user.plugins"
 require "user.config.telescope"
 require "user.config.autocommands"
+require "user.config.lspconfig"
 
