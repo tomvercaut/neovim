@@ -21,7 +21,10 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
+-------------------------------------------------------------------------------
 -- Normal mode --
+-------------------------------------------------------------------------------
+
 -- Window navigation
 keymap("n", "<C-h>", "<C-w>h", opts) -- jump to the window left of the current one
 keymap("n", "<C-j>", "<C-w>j", opts) -- jump to the window below the current one
@@ -53,31 +56,41 @@ keymap("n", "<Leader>t", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<Leader>r", ":NvimTreeRefresh<CR>", opts)
 
 -- telescope 
-print("telescope find_files")
 keymap("n", "<Leader>ff", "<cmd>lua require'telescope.builtin'.find_files()<CR>", opts)
 keymap("n", "<Leader>fg", "<cmd>lua require'telescope.builtin'.live_grep()<CR>", opts)
 keymap("n", "<Leader>fb", "<cmd>lua require'telescope.builtin'.buffers()<CR>", opts)
 keymap("n", "<Leader>fh", "<cmd>lua require'telescope.builtin'.help_tags()<CR>", opts)
 
 
+-------------------------------------------------------------------------------
 -- Insert mode --
+-------------------------------------------------------------------------------
+
 -- Move text up and down by one line
 keymap("i", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("i", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 
+-------------------------------------------------------------------------------
 -- Visual mode --
+-------------------------------------------------------------------------------
+
 -- Move text up and down by one line
 keymap("v", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("v", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
+-- indentation
+keymap("v", ">", ">gv", opts)
+keymap("v", "<", "<gv", opts)
 
 
+-------------------------------------------------------------------------------
 -- Terminal mode --
+-------------------------------------------------------------------------------
+
 -- Window navigation
 keymap("t", "<C-h>", "<C-w>h", term_opts) -- jump to the window left of the current one
 keymap("t", "<C-j>", "<C-w>j", term_opts) -- jump to the window below the current one
 keymap("t", "<C-k>", "<C-w>k", term_opts) -- jump to the window above the current one
 keymap("t", "<C-l>", "<C-w>l", term_opts) -- jump to the window right of the current one
-
 
