@@ -80,4 +80,3 @@ keymap("t", "<C-j>", "<C-w>j", term_opts) -- jump to the window below the curren
 keymap("t", "<C-k>", "<C-w>k", term_opts) -- jump to the window above the current one
 keymap("t", "<C-l>", "<C-w>l", term_opts) -- jump to the window right of the current one
 
-

@@ -16,7 +16,8 @@ telescope.setup {
       n = {
         ["<esc>"] = actions.close,
       },
-    }
+    },
+    file_ignore_patterns = { "^./.git/", ".git", ".idea", },
   }
 }
 

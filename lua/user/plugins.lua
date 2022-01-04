@@ -87,6 +87,8 @@ require('packer').startup(function()
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-emoji'
   use 'hrsh7th/cmp-nvim-lua'
+  -- use 'nvim_omnifunc'
+  use 'nvim-treesitter/nvim-treesitter'
 end)
 
 -- require('packer').sync()
