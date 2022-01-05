@@ -71,24 +71,18 @@ require('packer').startup(function()
     },
   }
 
-  -- lspconfig
-  use {
-    'neovim/nvim-lspconfig'
-  }
-
-  -- completion plugin
-  use 'hrsh7th/nvim-cmp'
-  -- buffer completions
-  use 'hrsh7th/cmp-buffer'
-  -- path completions
-  use 'hrsh7th/cmp-path'
-  -- cmdline completions
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-emoji'
-  use 'hrsh7th/cmp-nvim-lua'
-  -- use 'nvim_omnifunc'
-  use 'nvim-treesitter/nvim-treesitter'
+  use 'neovim/nvim-lspconfig'             -- lspconfig
+  use 'hrsh7th/nvim-cmp'                  -- completion plugin
+  use 'hrsh7th/cmp-buffer'                -- buffer completions
+  use 'hrsh7th/cmp-path'                  -- path completions
+  use 'hrsh7th/cmp-cmdline'               -- cmdline completions
+  use 'hrsh7th/cmp-nvim-lsp'              -- cmp for neovim build language server client
+  use 'hrsh7th/cmp-emoji'                 -- cmp for emojis
+  use 'hrsh7th/cmp-nvim-lua'              -- cmp for lua
+  use 'nvim-treesitter/nvim-treesitter'   -- nvim interface to parser generator / library to build 
+                                          -- a syntax tree for source files
+  use 'saadparwaiz1/cmp_luasnip'          -- snippet completions
+  use 'windwp/nvim-autopairs'             -- auto close braces, brackets, ...
+  
 end)
 
--- require('packer').sync()
