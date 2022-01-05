@@ -81,6 +81,7 @@ require('packer').startup(function()
   use 'hrsh7th/cmp-nvim-lua'              -- cmp for lua
   use 'nvim-treesitter/nvim-treesitter'   -- nvim interface to parser generator / library to build 
                                           -- a syntax tree for source files
+  use 'L3MON4D3/LuaSnip'                  -- completion sourece for nvim-cmp
   use 'saadparwaiz1/cmp_luasnip'          -- snippet completions
   use 'windwp/nvim-autopairs'             -- auto close braces, brackets, ...
   
