@@ -3,7 +3,7 @@ local has = function(x)
 end
 
 local executable = function(x)
-  return vim.fn.executable(executable) == 1
+  return vim.fn.executable(x) == 1
 end
 
 vim.api.nvim_exec(

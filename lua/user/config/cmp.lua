@@ -27,6 +27,9 @@ cmp.setup({
       require('luasnip').lsp_expand(args.body)
     end
   },
+window = {
+	documentation = "native"
+},
   mapping = {
     ["C-k"] = cmp.mapping.select_prev_item(),
     ["C-j"] = cmp.mapping.select_next_item(),
@@ -83,7 +86,11 @@ cmp.setup({
     behavior = cmp.ConfirmBehavior.Replace,
     select = false,
   },
-  documentation = true,
+  --documentation = true,
+})
+
+
+autopairs.setup({
 })
 
 -- cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done({ map_char = { tex = '' } }))

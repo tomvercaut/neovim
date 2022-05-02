@@ -11,6 +11,7 @@ require "user.config.telescope"
 require "user.config.autocommands"
 require "user.config.lspconfig"
 require "user.config.lsp.rust"
+require "user.config.lsp.sumneko_lua"
 require "user.config.cmp"
 require "user.config.treesitter"
 

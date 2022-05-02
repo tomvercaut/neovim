@@ -12,7 +12,6 @@ if not ok then
   return
 end
 
-
 local ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 
 if not ok then
@@ -24,4 +23,5 @@ local capabilities = cmp_nvim_lsp.update_capabilities(vim.lsp.protocol.make_clie
 lsp['rust_analyzer'].setup {
   capabilities = capabilities
 }
+
 
