@@ -13,7 +13,7 @@ if not ok then
 end
 
 function lsp_enable_default_capabilities(server_name)
-  local capabilities = cmp_nvim_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
+  local capabilities = cmp_nvim_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
   lsp[server_name].setup {
     capabilities = capabilities
   }
