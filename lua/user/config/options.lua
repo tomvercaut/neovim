@@ -46,3 +46,7 @@ if vim.fn.has('win32') then
   vim.o.shell="pwsh.exe"
 end
 
+if vim.loop.os_uname().sysname == "Linux" then
+  vim.o.shell="/usr/bin/bash"
+end
+
