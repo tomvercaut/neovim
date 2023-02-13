@@ -43,13 +43,13 @@ end
 
 -- print('table: ', dump(table))
 -- print('runtime_path: ', dump(runtime_path))
-local sumneko_bin_path = vim.fn.exepath('lua-language-server')
-local sumneko_root_path = vim.fn.fnamemodify(sumneko_bin_path, ':h:h:h')
+local lua_ls_bin_path = vim.fn.exepath('lua-language-server')
+local lua_ls_root_path = vim.fn.fnamemodify(lua_ls_bin_path, ':h:h:h')
 
--- print('sumneko_bin_path: ', sumneko_bin_path)
--- print('sumneko_root_path: ', sumneko_root_path)
+-- print('lua_ls_bin_path: ', lua_ls_bin_path)
+-- print('lua_ls_root_path: ', lua_ls_root_path)
 
-lsp.sumneko_lua.setup({
+lsp.lua_ls.setup({
   settings = {
 
     Lua = {
@@ -76,7 +76,7 @@ lsp.sumneko_lua.setup({
 })
 
 local capabilities = cmp_nvim_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
-lsp['sumneko_lua'].setup {
+lsp['lua_ls'].setup {
   capabilities = capabilities
 }
 
