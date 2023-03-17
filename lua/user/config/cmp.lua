@@ -19,7 +19,6 @@ end
 
 -- local cmp_autopairs = autopairs.completion.cmp
 
-
 cmp.setup({
   --- REQUIRED - you must specify a snippet engine
   snippet = {
@@ -27,35 +26,41 @@ cmp.setup({
       require('luasnip').lsp_expand(args.body)
     end
   },
-  window = {
-    documentation = "native"
-  },
-  -- Based on README.md in https://github.com/hrsh7th/nvim-cmp
   mapping = {
-    ["C-k"] = cmp.mapping.select_prev_item(),
-    ["C-j"] = cmp.mapping.select_next_item(),
-    ["C-b"] = cmp.mapping.scroll_docs(-4),
-    ["C-f"] = cmp.mapping.scroll_docs(4),
-    ["C-Space"] = cmp.mapping.complete(),
-    ["C-e"] = cmp.mapping.abort(),
-    ["CR"] = cmp.mapping.confirm({ select = true }),
-  },
-  sources = {
-    { name = "nvim_lsp" },
-    { name = "luasnip" },
-    { name = "nvim_lua" },
-    { name = "buffer" },
-    -- { name = "cmp_tabnine" },
-    { name = "path" },
-    -- { name = "emoji" },
-  },
-  confirm_opts = {
-    behavior = cmp.ConfirmBehavior.Replace,
-    select = false,
-  },
-  --documentation = true,
-})
+    ['<C-p>'] = cmp.mapping.select_prev_item(),
+    ['<C-n>'] = cmp.mapping.select_next_item(),
 
+    -- Add tab support
+    ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+    ['<Tab>'] = cmp.mapping.select_next_item(),
+
+    ['<C-S-f>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.close(),
+    ['<CR>'] = cmp.mapping.confirm({
+      behavior = cmp.ConfirmBehavior.Insert,
+      select = true,
+    }),
+  },
+  -- Installed sources:
+  sources = {
+    { name = 'path' },                              -- file paths
+    { name = 'nvim_lsp', keyword_length = 3 },      -- from language server
+    { name = 'nvim_lsp_signature_help'},            -- display function signatures with current parameter emphasized
+    { name = 'nvim_lua', keyword_length = 2},       -- complete neovim's Lua runtime API such vim.lsp.*
+    { name = 'buffer', keyword_length = 2 },        -- source current buffer
+  },
+  window = {
+    -- completion = cmp.config.window.bordered(),
+    -- documentation = cmp.config.window.bordered(),
+  },
+  formatting = {
+    fields = {'menu', 'abbr', 'kind'},
+  },
+
+})
 
 autopairs.setup({
 })
