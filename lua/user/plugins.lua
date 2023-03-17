@@ -71,19 +71,22 @@ require('packer').startup(function()
     },
   }
 
-  use 'neovim/nvim-lspconfig'             -- lspconfig
-  use 'hrsh7th/nvim-cmp'                  -- completion plugin
-  use 'hrsh7th/cmp-buffer'                -- buffer completions
-  use 'hrsh7th/cmp-path'                  -- path completions
-  use 'hrsh7th/cmp-cmdline'               -- cmdline completions
-  use 'hrsh7th/cmp-nvim-lsp'              -- cmp for neovim build language server client
-  use 'hrsh7th/cmp-emoji'                 -- cmp for emojis
-  use 'hrsh7th/cmp-nvim-lua'              -- cmp for lua
-  use 'nvim-treesitter/nvim-treesitter'   -- nvim interface to parser generator / library to build 
-                                          -- a syntax tree for source files
-  use 'L3MON4D3/LuaSnip'                  -- completion sourece for nvim-cmp
-  use 'saadparwaiz1/cmp_luasnip'          -- snippet completions
-  use 'windwp/nvim-autopairs'             -- auto close braces, brackets, ...
+  use 'neovim/nvim-lspconfig'                -- lspconfig
+  use 'hrsh7th/nvim-cmp'                     -- completion plugin
+  use 'hrsh7th/cmp-buffer'                   -- buffer completions
+  use 'hrsh7th/cmp-path'                     -- path completions
+  use 'hrsh7th/cmp-cmdline'                  -- cmdline completions
+  use 'hrsh7th/cmp-nvim-lsp'                 -- cmp for neovim build language server client
+  use 'hrsh7th/cmp-nvim-lsp-signature-help'  -- cmp for neovim build language server client
+  use 'hrsh7th/cmp-emoji'                    -- cmp for emojis
+  use 'hrsh7th/cmp-nvim-lua'                 -- cmp for lua
+  use 'hrsh7th/cmp-vsnip'                    -- snippet feature in nvim based on vim-vsnip
+  use 'hrsh7th/vim-vsnip'                    -- snippet feature in vim
+  use 'nvim-treesitter/nvim-treesitter'      -- nvim interface to parser generator / library to build 
+                                             -- a syntax tree for source files
+  use 'L3MON4D3/LuaSnip'                     -- completion source for nvim-cmp
+  use 'saadparwaiz1/cmp_luasnip'             -- snippet completions
+  use 'windwp/nvim-autopairs'                -- auto close braces, brackets, ...
   
 end)
 
