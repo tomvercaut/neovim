@@ -5,11 +5,14 @@ if not ok then
   return
 end
 
+require("nvim-treesitter").prefer_git = true
+
 require'nvim-treesitter.configs'.setup {
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
-  ensure_installed = "all",
+  -- ensure_installed = "all"
+  ensure_installed = { "c", "cpp", "lua", "luadoc", "vim", "vimdoc", "rust", "python", "bibtex", "csv", "java", "bash", "fish", "html", "css", "json", "markdown", "markdown_inline", "regex", "sql", "toml" },
   -- Install languages synchronously (only applied to `ensure_installed`)
-  -- sync_install = false,
+  sync_install = false,
   -- -- List of parsers to ignore installing
   ignore_install = { "fusion" },
   highlight = {
