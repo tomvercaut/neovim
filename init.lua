@@ -14,4 +14,5 @@ require "user.config.cmp"
 require "user.config.treesitter"
 require "user.config.nvim_web_devicons"
 require "user.config.nvim_tree"
-
+require "user.config.snippets.common"
+require "user.config.latex"

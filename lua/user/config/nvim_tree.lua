@@ -10,7 +10,6 @@ if not ok then
   return
 end
 
-
 tree.setup(
   -- log = {
   --   enable = true,

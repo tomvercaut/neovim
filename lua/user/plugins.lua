@@ -6,6 +6,9 @@ local executable = function(x)
   return vim.fn.executable(x) == 1
 end
 
+-- Remove the intro message when starting Neovim without a file
+vim.opt.shortmess:append({ I = true})
+
 vim.api.nvim_exec(
 [[
   augroup Packer
@@ -30,31 +33,28 @@ require('packer').startup(function()
 
   -- colorscheme
   use {
-    'navarasu/onedark.nvim',
-    config = function()
-      require('onedark').setup()
-    end,
+    "catppuccin/nvim",
+    as = "catppuccin"
   }
-
-  -- status line
+    -- status line
   use {
     'nvim-lualine/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt=true},
-    -- after = 'onedark',
-    config = function()
+    requires = {
+      {'nvim-tree/nvim-web-devicons', opt=true}
+    },
+    config = function ()
       require('lualine').setup({
         options = {
-          theme = 'onedark',
+          theme = 'catppuccin'
         }
-      }
-    )
-    end,
+      })
+    end
   }
 
   -- nvim-tree: file explorer
   use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {'kyazdani42/nvim-web-devicons'},
+    'nvim-tree/nvim-tree.lua',
+    requires = {'nvim-tree/nvim-web-devicons'},
     config = function()
       require('nvim-tree').setup()
     end,
@@ -63,13 +63,14 @@ require('packer').startup(function()
   -- nvim-telescope
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { 
+    requires = {
       {
         'nvim-lua/plenary.nvim',
-        'kyazdani42/nvim-web-devicons',
-      } 
+        'nvim-tree/nvim-web-devicons',
+      }
     },
   }
+  -- 'kyazdani42/nvim-web-devicons',
 
   use 'neovim/nvim-lspconfig'                -- lspconfig
   use 'hrsh7th/nvim-cmp'                     -- completion plugin
@@ -82,11 +83,12 @@ require('packer').startup(function()
   use 'hrsh7th/cmp-nvim-lua'                 -- cmp for lua
   use 'hrsh7th/cmp-vsnip'                    -- snippet feature in nvim based on vim-vsnip
   use 'hrsh7th/vim-vsnip'                    -- snippet feature in vim
-  use 'nvim-treesitter/nvim-treesitter'      -- nvim interface to parser generator / library to build 
+  use 'nvim-treesitter/nvim-treesitter'      -- nvim interface to parser generator / library to build
                                              -- a syntax tree for source files
   use 'L3MON4D3/LuaSnip'                     -- completion source for nvim-cmp
   use 'saadparwaiz1/cmp_luasnip'             -- snippet completions
   use 'windwp/nvim-autopairs'                -- auto close braces, brackets, ...
-  
+  use 'lervag/vimtex'                        -- syntax plugin for LaTeX
+
 end)
 
