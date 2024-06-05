@@ -1,18 +1,4 @@
-if require "user.bootstrap_packer"() then
-  return
-end
-
-vim.g.mapleader = " "
-
-require "user.config.options"
-require "user.config.keymappings"
-require "user.plugins"
-require "user.config.telescope"
-require "user.config.autocommands"
-require "user.config.lspconfig"
-require "user.config.cmp"
-require "user.config.treesitter"
-require "user.config.nvim_web_devicons"
-require "user.config.nvim_tree"
-require "user.config.snippets.common"
-require "user.config.latex"
+-- Force the language to English
+vim.api.nvim_exec("language en_US", true)
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")

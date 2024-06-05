@@ -1,5 +1,10 @@
-plugin
-node_modules
-package.json
-package-lock.json
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data
 .vscode
+lazy-lock.json
