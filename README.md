@@ -12,6 +12,16 @@ can be found in the [documentation](https://lazyvim.github.io/installation).
 
 *This configuration should be considerd work in progress.*
 
+## Dependencies
+
+* Terminal (e.g. Wezterm)
+* C/C++ compiler
+* Rust
+  * treesitter-cli: `cargo install treesitter-cli`
+* Git
+* Lazygit
+* NodeJS / NPM
+
 ## License
 
 Distributed under the MIT License. See `License.txt` for more information.
