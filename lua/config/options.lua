@@ -19,4 +19,5 @@ local function imap(shortcut, command)
 end
 
 -- Remap C-y to C-k so C-y can be
-imap("<C-y>", "<C-k>")
+--imap("<C-y>", "<C-k>")
+-- imap("<C-y>", "<C-k>")

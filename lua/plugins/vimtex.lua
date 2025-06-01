@@ -4,6 +4,7 @@ return {
   config = function()
     vim.g.vimtex_compiler_silent = 1
     vim.g.vimtex_quickfix_open_on_warning = 0
+    vim.g.vimtex_indent_on_ampersands = 1
     vim.g.vimtex_compiler_latexmk = {
       out_dir = "out",
     }
