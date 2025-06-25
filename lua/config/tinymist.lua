@@ -1,0 +1,7 @@
+-- require("lspconfig")["tinymist"].setup({
+--   filetypes = { "typst" },
+--   settings = {
+--     formatterMode = "typstyle",
+--     semanticTokens = "enable",
+--   },
+-- })
