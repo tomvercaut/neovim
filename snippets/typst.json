@@ -1,0 +1,68 @@
+{
+  "table": {
+    "prefix": "insert_table",
+    "body": [
+      "#figure(",
+      "  table(",
+      "    // The column sizes. See the grid documentation for more information on track sizing.",
+      "    columns: ${3:()},",
+      "    // The row sizes. See the grid documentation for more information on track sizing.",
+      "    rows: ${4:()},",
+      "    // The gaps between rows and columns.",
+      "    // This is a shorthand for setting column-gutter and row-gutter to the same value.",
+      "    // See the grid documentation for more information on gutters.",
+      "    gutter: ${5:()},",
+      "    // How to stroke the cells",
+      "    // Strokes can be disabled by setting this to none",
+      "    stroke: ${6:1pt + black},",
+      "    fill: ${7:none},",
+      "    // How to fill the cells.",
+      "    // This can be a color or a function that returns a color.",
+      "    // The function receives the cells' column and row indices, starting from zero.",
+      "    // This can be used to implement striped tables.",
+      "    align: ${8:auto},",
+      "    ",
+      "    table.header[$9],",
+      "    [$0]",
+      "  )",
+      "  caption: [${1:caption}]",
+      ") <table-$2>"
+    ],
+    "description": "Insert a table"
+  },
+  "set": {
+    "prefix": "set",
+    "body": [
+      "set $1($2)$0"
+    ],
+    "description": "Set rule"
+  },
+  "let": {
+    "prefix": "let",
+    "body": [
+      "let $1 = $2"
+    ],
+    "description": "Let binding"
+  },
+  "include": {
+    "prefix": "include",
+    "body": [
+      "include \"$1\"$0"
+    ],
+    "description": "Include module"
+  },
+  "import": {
+    "prefix": "import",
+    "body": [
+      "import \"$1\"$0"
+    ],
+    "description": "Import module"
+  },
+  "import_module_items": {
+    "prefix": "import_items",
+    "body": [
+      "import \"$1\": $2"
+    ],
+    "description": "Import items from module"
+  }
+}

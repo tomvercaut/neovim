@@ -2,7 +2,9 @@ return {
   "saghen/blink.cmp",
   enabled = true,
   event = "VeryLazy",
+  dependencies = "echasnovski/mini.snippets",
   opts = {
+    snippets = { preset = "mini_snippets" },
     sources = {
       default = { "lsp", "path", "snippets", "buffer" },
     },
