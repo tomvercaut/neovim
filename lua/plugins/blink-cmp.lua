@@ -2,7 +2,7 @@ return {
   "saghen/blink.cmp",
   enabled = true,
   event = "VeryLazy",
-  dependencies = "echasnovski/mini.snippets",
+  dependencies = "nvim-mini/mini.snippets",
   opts = {
     snippets = { preset = "mini_snippets" },
     sources = {
